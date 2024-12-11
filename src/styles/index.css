@@ -10,33 +10,36 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
-
-body{
-    margin-top: 100px;
+/* ToDoList.css */
+.container {
+    max-width: 600px;
+    margin: auto;
 }
 
-ul{
-    padding: 0;
-    margin-bottom: 0;
+.card {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
 }
 
-ul {
-    border: 1px solid grey;
-    list-style: none;
-    padding: 5px;
+.list-group-item {
+    font-size: 1.2rem;
+    transition: background-color 0.2s ease-in-out;
 }
 
-li{
-    border: 1px solid grey;
-    list-style: none;
-    padding: 5px;
+.list-group-item:hover {
+    background-color: #f8f9fa;
 }
 
-h1{
-    text-align: center;
-}
-
-input{
+.list-group-item button {
     border: none;
-    width: 100%;
+    background: none;
+    color: #dc3545;
+    cursor: pointer;
+    display: flex; /* Asegura que el contenido esté alineado verticalmente */
+    align-items: center;
+    padding: 4px;
+}
+
+.list-group-item i {
+    margin-left: 8px; /* Espaciado a la izquierda del icono */
 }
