@@ -11,6 +11,11 @@
 
 */
 /* ToDoList.css */
+.card-body h2 {
+    text-align: center;
+    color: grey;
+}
+
 .container {
     max-width: 600px;
     margin: auto;
@@ -24,22 +29,45 @@
 .list-group-item {
     font-size: 1.2rem;
     transition: background-color 0.2s ease-in-out;
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    color: grey;
 }
 
 .list-group-item:hover {
     background-color: #f8f9fa;
 }
 
-.list-group-item button {
+.delete-btn {
     border: none;
     background: none;
-    color: #dc3545;
+    color: #dd4a59;
     cursor: pointer;
-    display: flex; /* Asegura que el contenido esté alineado verticalmente */
+    padding: 0;
+    display: none;
     align-items: center;
-    padding: 4px;
+    transition: transform 0.2s ease-in-out;
+    position: absolute;
+    right: 10px;
 }
 
-.list-group-item i {
-    margin-left: 8px; /* Espaciado a la izquierda del icono */
+.list-group-item:hover .delete-btn{
+    display: flex;
+}
+
+.delete-btn:hover{
+    transform: scale(1.2);
+}
+
+.input-group .form-control{
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+}
+
+.input-group .form-control:focus{
+    outline: none;
+    box-shadow: none;
+    border-color: #ccc;
 }
